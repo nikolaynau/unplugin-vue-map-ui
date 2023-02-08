@@ -55,3 +55,36 @@ module.exports = {
 </details>
 
 ## Usage
+
+It will automatically turn this
+
+```html
+<script setup>
+//...
+</script>
+
+<template>
+  <VMap>
+    <VMapOsmTileLayer />
+  </VMap>
+</template>
+```
+
+into this
+
+```html
+<script setup>
+import { VMap, VMapOsmTileLayer } from 'vue3-map-ui';
+//...
+</script>
+
+<template>
+  <VMap>
+    <VMapOsmTileLayer />
+  </VMap>
+</template>
+```
+
+## License
+
+Licensed under the [MIT License](./LICENSE).
