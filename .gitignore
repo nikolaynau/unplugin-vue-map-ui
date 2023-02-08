@@ -4,14 +4,14 @@
 # IDE
 /.idea
 /.awcache
-/.vscode
+.vscode/*
+!.vscode/launch.json
 
 # misc
 npm-debug.log
 .DS_Store
 
 # tests
-/test
 /coverage
 /.nyc_output
 

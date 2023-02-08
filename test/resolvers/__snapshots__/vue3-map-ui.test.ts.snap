@@ -1,0 +1,70 @@
+// Vitest Snapshot v1
+
+exports[`Vue3 Map UI Resolver > components should be auto imported 1`] = `
+"import { openBlock, createBlock, withCtx, createVNode, createApp } from \\"vue\\";
+import { VMapOsmTileLayer, VMap } from \\"vue3-map-ui\\";
+(function polyfill() {
+  const relList = document.createElement(\\"link\\").relList;
+  if (relList && relList.supports && relList.supports(\\"modulepreload\\")) {
+    return;
+  }
+  for (const link of document.querySelectorAll('link[rel=\\"modulepreload\\"]')) {
+    processPreload(link);
+  }
+  new MutationObserver((mutations) => {
+    for (const mutation of mutations) {
+      if (mutation.type !== \\"childList\\") {
+        continue;
+      }
+      for (const node of mutation.addedNodes) {
+        if (node.tagName === \\"LINK\\" && node.rel === \\"modulepreload\\")
+          processPreload(node);
+      }
+    }
+  }).observe(document, { childList: true, subtree: true });
+  function getFetchOpts(script) {
+    const fetchOpts = {};
+    if (script.integrity)
+      fetchOpts.integrity = script.integrity;
+    if (script.referrerpolicy)
+      fetchOpts.referrerPolicy = script.referrerpolicy;
+    if (script.crossorigin === \\"use-credentials\\")
+      fetchOpts.credentials = \\"include\\";
+    else if (script.crossorigin === \\"anonymous\\")
+      fetchOpts.credentials = \\"omit\\";
+    else
+      fetchOpts.credentials = \\"same-origin\\";
+    return fetchOpts;
+  }
+  function processPreload(link) {
+    if (link.ep)
+      return;
+    link.ep = true;
+    const fetchOpts = getFetchOpts(link);
+    fetch(link.href, fetchOpts);
+  }
+})();
+const _export_sfc = (sfc, props) => {
+  const target = sfc.__vccOpts || sfc;
+  for (const [key, val] of props) {
+    target[key] = val;
+  }
+  return target;
+};
+const _sfc_main = {};
+function _sfc_render(_ctx, _cache) {
+  const _component_VMapOsmTileLayer = VMapOsmTileLayer;
+  const _component_VMap = VMap;
+  return openBlock(), createBlock(_component_VMap, null, {
+    default: withCtx(() => [
+      createVNode(_component_VMapOsmTileLayer)
+    ]),
+    _: 1
+    /* STABLE */
+  });
+}
+const App = /* @__PURE__ */ _export_sfc(_sfc_main, [[\\"render\\", _sfc_render], [\\"__file\\", \\"C:/work/projects/pantry/js/re/unplugin-vue3-map-ui/test/fixtures/app/src/App.vue\\"]]);
+const app = createApp(App);
+app.mount(\\"#app\\");
+"
+`;
