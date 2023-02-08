@@ -33,6 +33,12 @@ describe('Vue3 Map UI Resolver', () => {
       }
     });
 
-    expect(result.output[0].code).toMatchSnapshot();
+    expect(result.output[0].code).toContain(
+      'import { VMapOsmTileLayer, VMap } from "vue3-map-ui"'
+    );
+    expect(result.output[0].code).toContain(
+      'const _component_VMapOsmTileLayer = VMapOsmTileLayer'
+    );
+    expect(result.output[0].code).toContain('const _component_VMap = VMap');
   });
 });
