@@ -1,11 +1,11 @@
-# unplugin-vue3-map-ui [![npm version](https://img.shields.io/npm/v/unplugin-vue3-map-ui.svg)](https://npmjs.org/package/unplugin-vue3-map-ui)
+# unplugin-vue-map-ui [![npm version](https://img.shields.io/npm/v/unplugin-vue-map-ui.svg)](https://npmjs.org/package/unplugin-vue-map-ui)
 
 > On-demand components auto importing for [vue3-map-ui](https://github.com/nikolaynau/vue3-map-ui).
 
 ## Installation
 
 ```bash
-npm install -D unplugin-vue3-map-ui unplugin-vue-components
+npm install -D unplugin-vue-map-ui unplugin-vue-components
 ```
 
 <details>
@@ -16,7 +16,7 @@ npm install -D unplugin-vue3-map-ui unplugin-vue-components
 // vite.config.ts
 import { defineConfig } from 'vite';
 import Components from 'unplugin-vue-components/vite';
-import { Vue3MapUiResolver } from 'unplugin-vue3-map-ui';
+import { Vue3MapUiResolver } from 'unplugin-vue-map-ui';
 
 export default defineConfig({
   // ...
@@ -39,7 +39,7 @@ export default defineConfig({
 ```ts
 // webpack.config.js
 const Components = require('unplugin-vue-components/webpack');
-const { Vue3MapUiResolver } = require('unplugin-vue3-map-ui');
+const { Vue3MapUiResolver } = require('unplugin-vue-map-ui');
 
 module.exports = {
   // ...
