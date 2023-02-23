@@ -1,1 +1,1 @@
-export * from './vue3-map-ui';
+export * from './vue-map-ui';

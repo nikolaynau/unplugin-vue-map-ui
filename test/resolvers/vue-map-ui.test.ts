@@ -5,13 +5,13 @@ import { fileURLToPath } from 'url';
 import vue from '@vitejs/plugin-vue';
 import { deleteSync } from 'del';
 import Components from 'unplugin-vue-components/vite';
-import { Vue3MapUiResolver } from '../../src';
+import { VueMapUiResolver } from '../../src';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const appDir = path.resolve(__dirname, '../fixtures/app');
 const distDir = path.resolve(appDir, './dist');
 
-describe('Vue3 Map UI Resolver', () => {
+describe('VueMapUiResolver', () => {
   afterEach(() => {
     deleteSync(distDir);
   });
@@ -22,19 +22,19 @@ describe('Vue3 Map UI Resolver', () => {
       plugins: [
         vue(),
         Components({
-          resolvers: [Vue3MapUiResolver()]
+          resolvers: [VueMapUiResolver()]
         })
       ],
       build: {
         minify: false,
         rollupOptions: {
-          external: ['vue', 'vue3-map-ui']
+          external: ['vue', 'vue-map-ui']
         }
       }
     });
 
     expect(result.output[0].code).toContain(
-      'import { VMapOsmTileLayer, VMap } from "vue3-map-ui"'
+      'import { VMapOsmTileLayer, VMap } from "vue-map-ui"'
     );
     expect(result.output[0].code).toContain(
       'const _component_VMapOsmTileLayer = VMapOsmTileLayer'
