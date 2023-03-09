@@ -46,27 +46,27 @@
     "husky": "husky install"
   },
   "dependencies": {
-    "unplugin-vue-components": "^0.23.0"
+    "unplugin-vue-components": "^0.24.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.4.2",
-    "@commitlint/config-angular": "^17.4.2",
-    "@types/node": "^18.13.0",
-    "@typescript-eslint/eslint-plugin": "^5.51.0",
-    "@typescript-eslint/parser": "^5.51.0",
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-angular": "^17.4.4",
+    "@types/node": "^18.14.6",
+    "@typescript-eslint/eslint-plugin": "^5.54.1",
+    "@typescript-eslint/parser": "^5.54.1",
     "@vitejs/plugin-vue": "^4.0.0",
     "del": "^7.0.0",
-    "eslint": "^8.33.0",
-    "eslint-config-prettier": "^8.6.0",
+    "eslint": "^8.35.0",
+    "eslint-config-prettier": "^8.7.0",
     "eslint-plugin-prettier": "^4.2.1",
     "esno": "^0.16.3",
     "husky": "^8.0.3",
-    "lint-staged": "^13.1.1",
+    "lint-staged": "^13.1.2",
     "prettier": "^2.8.4",
-    "tsup": "^6.6.0",
+    "tsup": "^6.6.3",
     "typescript": "^4.9.5",
-    "vite": "^4.1.1",
-    "vitest": "^0.28.4",
+    "vite": "^4.1.4",
+    "vitest": "^0.29.2",
     "vue": "^3.2.47"
   }
 }
