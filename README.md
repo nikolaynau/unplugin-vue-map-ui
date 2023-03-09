@@ -91,7 +91,7 @@ import { VMap, VMapOsmTileLayer } from 'vue-map-ui';
 
 Make sure you also add `components.d.ts` to your `tsconfig.json` under `include`.
 
-```json
+```js
 // tsconfig.json
 {
   // ...
