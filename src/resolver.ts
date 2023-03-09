@@ -1,5 +1,5 @@
 import type { ComponentResolver } from 'unplugin-vue-components';
-import { libraryName } from '../../config';
+import { libraryName } from './config';
 
 export function VueMapUiResolver(): ComponentResolver {
   return {
