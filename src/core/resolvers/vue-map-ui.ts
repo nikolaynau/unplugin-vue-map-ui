@@ -1,4 +1,5 @@
 import type { ComponentResolver } from 'unplugin-vue-components';
+import { libraryName } from '../../config';
 
 export function VueMapUiResolver(): ComponentResolver {
   return {
@@ -7,7 +8,7 @@ export function VueMapUiResolver(): ComponentResolver {
       if (name.match(/^VMap[A-Z]?/)) {
         return {
           name,
-          from: 'vue-map-ui'
+          from: libraryName
         };
       }
     }

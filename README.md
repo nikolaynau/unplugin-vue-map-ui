@@ -16,14 +16,15 @@ npm install -D unplugin-vue-map-ui unplugin-vue-components
 // vite.config.ts
 import { defineConfig } from 'vite';
 import Components from 'unplugin-vue-components/vite';
-import { VueMapUiResolver } from 'unplugin-vue-map-ui';
+import { VueMapUiResolver, VueMapUiPreset } from 'unplugin-vue-map-ui';
 
 export default defineConfig({
   // ...
   plugins: [
     // ...
     Components({
-      resolvers: [VueMapUiResolver()]
+      resolvers: [VueMapUiResolver()],
+      types: [VueMapUiPreset]
     })
   ]
 });
@@ -39,13 +40,14 @@ export default defineConfig({
 ```ts
 // webpack.config.js
 const Components = require('unplugin-vue-components/webpack');
-const { VueMapUiResolver } = require('unplugin-vue-map-ui');
+const { VueMapUiResolver, VueMapUiPreset } = require('unplugin-vue-map-ui');
 
 module.exports = {
   // ...
   plugins: [
     Components({
-      resolvers: [VueMapUiResolver()]
+      resolvers: [VueMapUiResolver()],
+      types: [VueMapUiPreset]
     })
   ]
 };
@@ -58,7 +60,7 @@ module.exports = {
 
 It will automatically turn this
 
-```html
+```vue
 <script setup>
 //...
 </script>
@@ -72,7 +74,7 @@ It will automatically turn this
 
 into this
 
-```html
+```vue
 <script setup>
 import { VMap, VMapOsmTileLayer } from 'vue-map-ui';
 //...
@@ -83,6 +85,18 @@ import { VMap, VMapOsmTileLayer } from 'vue-map-ui';
     <VMapOsmTileLayer />
   </VMap>
 </template>
+```
+
+## TypeScript
+
+Make sure you also add `components.d.ts` to your `tsconfig.json` under `include`.
+
+```json
+// tsconfig.json
+{
+  // ...
+  "include": ["components.d.ts"]
+}
 ```
 
 ## License
