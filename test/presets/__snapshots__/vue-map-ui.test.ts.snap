@@ -13,8 +13,17 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     VMap: typeof import('vue-map-ui')['VMap']
+    VMapArcGisAeroTileLayer: typeof import('vue-map-ui')['VMapArcGisAeroTileLayer']
+    VMapArcGisTileLayer: typeof import('vue-map-ui')['VMapArcGisTileLayer']
+    VMapAttributionControl: typeof import('vue-map-ui')['VMapAttributionControl']
+    VMapGoogleTileLayer: typeof import('vue-map-ui')['VMapGoogleTileLayer']
+    VMapLayersControl: typeof import('vue-map-ui')['VMapLayersControl']
+    VMapMapboxTileLayer: typeof import('vue-map-ui')['VMapMapboxTileLayer']
+    VMapOcmTileLayer: typeof import('vue-map-ui')['VMapOcmTileLayer']
     VMapOsmTileLayer: typeof import('vue-map-ui')['VMapOsmTileLayer']
+    VMapScaleControl: typeof import('vue-map-ui')['VMapScaleControl']
     VMapTileLayer: typeof import('vue-map-ui')['VMapTileLayer']
+    VMapZoomControl: typeof import('vue-map-ui')['VMapZoomControl']
   }
 }
 "
