@@ -11,6 +11,6 @@ export const allComponents = [
   'VMapArcGisTileLayer',
   'VMapGoogleTileLayer',
   'VMapMapboxTileLayer',
-  'VMapOcmTileLayer',
+  'VMapOpenTransportTileLayer',
   'VMapOsmTileLayer'
 ];
