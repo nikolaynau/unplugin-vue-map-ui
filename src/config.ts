@@ -4,6 +4,7 @@ export const allComponents = [
   'VMapAttributionControl',
   'VMapControlPosition',
   'VMapLayersControl',
+  'VMapLocateControl',
   'VMapScaleControl',
   'VMapZoomControl',
   'VMapDefaultIcon',
